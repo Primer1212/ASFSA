@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - Виндос</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kristi:wght@400&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="img/header/logo.png"></a>
+            </div>
+            <nav class="navigation-center">
+                <a href="products.html" class="nav-item">ПРОДУКТЫ</a>
+                <a href="products_chips.html" class="nav-item">ЧИПСЫ</a>
+                <a href="products_juice.html" class="nav-item">НАПИТКИ</a>
+                <a href="products_soda.html" class="nav-item">ГАЗИРОВАННЫЕ НАПИТКИ</a>
+            </nav>
+            <nav class="navigation-right">
+                <a href="about.html" class="nav-item">О НАС</a>
+                <a href="contacts.html" class="nav-item">КОНТАКТЫ И СОТРУДНИЧЕСТВО</a>
+                <a href="auth.html" class="nav-item">ВЫЙТИ</a>
+            </nav>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="products.html" class="mobile-nav-item">ПРОДУКТЫ</a>
+            <a href="products_chips.html" class="mobile-nav-item">ЧИПСЫ</a>
+            <a href="products_juice.html" class="mobile-nav-item">НАПИТКИ</a>
+            <a href="products_soda.html" class="mobile-nav-item">ГАЗИРОВАННЫЕ НАПИТКИ</a>
+            <a href="about.html" class="mobile-nav-item">О НАС</a>
+            <a href="contacts.html" class="mobile-nav-item">КОНТАКТЫ И СОТРУДНИЧЕСТВО</a>
+            <a href="auth.html" class="mobile-nav-item">ВЫЙТИ</a>
+        </nav>
+    </header>
+
+    <main class="profile-main">
+        <section class="profile-section">
+            <div class="container">
+                <div class="profile-cards">
+                    <div class="profile-card">
+                        <div class="profile-card__icon">
+                            <img src="img/profile/calendar 1.svg" width="141" height="141">
+                        </div>
+                        <h3 class="profile-card__title">Текущие заказы</h3>
+                    </div>
+                    
+                    <div class="profile-card">
+                        <div class="profile-card__icon">
+                            <img src="img/profile/авфывафывафываыф 1.svg" width="141" height="141">
+                        </div>
+                        <h3 class="profile-card__title">Личные данные</h3>
+                    </div>
+                    
+                    <div class="profile-card">
+                        <div class="profile-card__icon">
+                            <img src="img/profile/check-list 1-1.svg" width="141" height="141">
+                        </div>
+                        <h3 class="profile-card__title">История заказов</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobileNav');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
+                hamburger.classList.remove('active');
+                mobileNav.classList.remove('active');
+            }
+        });
+    </script>
+
+    <footer class="footer">
+        <section class="over">
+            <div class="over-card">
+                <div class="over-logo">
+                    <img src="img/logo.png" width="300px" height="132px">
+                    <a href="#"><h2>8-800-301-7755</h2></a>
+                    <a href="#">Короткий номер <b>*7055</b></a>
+                    <p>E-mail: <a href="#">info@winelab.ru</a></p>
+                    <p>Мы в соцсетях:
+                        <a href="#"><img src="img/vk.png" width="60px" height="70px"></a>
+                        <a href="#"><img src="img/telegram.png" width="47px" height="47px"></a>
+                    </p>
+                </div>
+                <div class="over-stocks">
+                    <p>АКЦИИ:</p>
+                    <li><a href="#">ПРОДУКТЫ</a></li>
+                    <li><a href="chips.html">ЧИПСЫ</a></li>
+                    <li><a href="juice.html">НАПИТКИ</a></li>
+                    <li><a href="soda.html">ГАЗИРОВАННЫЕ НАПИТКИ</a></li>
+                </div>
+                <div class="to-costumers">
+                    <p>ПОКУПАТЕЛЯМ</p>
+                    <li><a href="#">Программа лояльности</a></li>
+                    <li><a href="#">Подарочные сертификаты</a></li>
+                    <li><a href="#">Как сделать заказ</a></li>
+                    <li><a href="#">Мобильное приложение</a></li>
+                    <li><a href="#">Юридическая информация</a></li>
+                    <li><a href="#">Обратная связь</a></li>
+                    <li><a href="#">Опция"Заказ со склада"</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Привилегии для инвесторов</a></li>
+                </div>
+                <div class="to-costumers">
+                    <li><a href="#">Бизнес</a></li>
+                    <li><a href="contacts.html">Контакты и сотрудничество</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="#">Карта сайта</a></li>
+                    <li><a href="#">Работа</a></li>
+                    <li><a href="#">Корпоративный заказ</a></li>
+                    <li><a href="#">Политика в отношении обработки персональных данных</a></li>
+                    <li><a href="#">Согласие на обработку персональных данных</a></li>
+                </div>
+            </div>
+        </section>
+        <div class="over-header">
+            <div class="over-card-header">
+                <div class="over-title">
+                    <p>© 2024 Винлаб</p>
+                </div>
+                <div class="over-title">
+                    <p>МОБИЛЬНОЕ ПРИЛОЖЕНИЕ ВИНЛАБ</p>
+                </div>
+                <div class="over-title">
+                    <a href="#"><img src="img/google.png"></a>
+                    <a href="#"><img src="img/app.png"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
